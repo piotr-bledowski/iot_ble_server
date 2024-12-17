@@ -1,0 +1,37 @@
+[1/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c: In function 'gatts_profile_wifi_event_handler':
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:563:41: warning: passing argument 5 of 'esp_ble_gatts_add_char_descr' from incompatible pointer type [-Wincompatible-pointer-types]
+  563 |                                         (uint8_t*)"WiFi SSID");
+      |                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t * {aka unsigned char *}
+In file included from C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:15:
+C:/Users/piotr/esp/v5.3.1/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h:427:61: note: expected 'esp_attr_control_t *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  427 |                                         esp_attr_control_t *control);
+      |                                         ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:575:41: warning: passing argument 5 of 'esp_ble_gatts_add_char_descr' from incompatible pointer type [-Wincompatible-pointer-types]
+  575 |                                         (uint8_t*)"WiFi Password");
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t * {aka unsigned char *}
+C:/Users/piotr/esp/v5.3.1/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h:427:61: note: expected 'esp_attr_control_t *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  427 |                                         esp_attr_control_t *control);
+      |                                         ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:487:23: warning: unused variable 'ssid_descr_uuid' [-Wunused-variable]
+  487 |         esp_bt_uuid_t ssid_descr_uuid = {
+      |                       ^~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c: At top level:
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:176:27: warning: 'b_prepare_write_env' defined but not used [-Wunused-variable]
+  176 | static prepare_type_env_t b_prepare_write_env;
+      |                           ^~~~~~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:59:25: warning: 'gatts_demo_char1_val' defined but not used [-Wunused-variable]
+   59 | static esp_attr_value_t gatts_demo_char1_val =
+      |                         ^~~~~~~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:57:29: warning: 'b_property' defined but not used [-Wunused-variable]
+   57 | static esp_gatt_char_prop_t b_property = 0;
+      |                             ^~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:44:13: warning: 'test_device_name' defined but not used [-Wunused-variable]
+   44 | static char test_device_name[ESP_BLE_ADV_NAME_LEN_MAX] = "ESP_GATTS_DEMO";
+      |             ^~~~~~~~~~~~~~~~
+[2/9] Linking C static library esp-idf\main\libmain.a
+[3/9] Performing build step for 'bootloader'

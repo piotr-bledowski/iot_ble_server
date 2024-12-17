@@ -1,0 +1,49 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\piotr\Desktop\IoT\iot_ble_server\build\bootloader\esp-idf\esptool_py && C:\Users\piotr\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/piotr/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/piotr/Desktop/IoT/iot_ble_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/gatts_demo.c.obj
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c: In function 'gatts_profile_wifi_event_handler':
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:558:41: warning: passing argument 5 of 'esp_ble_gatts_add_char_descr' from incompatible pointer type [-Wincompatible-pointer-types]
+  558 |                                         (uint8_t*)"WiFi SSID");
+      |                                         ^~~~~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t * {aka unsigned char *}
+In file included from C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:15:
+C:/Users/piotr/esp/v5.3.1/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h:427:61: note: expected 'esp_attr_control_t *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  427 |                                         esp_attr_control_t *control);
+      |                                         ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:570:41: warning: passing argument 5 of 'esp_ble_gatts_add_char_descr' from incompatible pointer type [-Wincompatible-pointer-types]
+  570 |                                         (uint8_t*)"WiFi Password");
+      |                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                         |
+      |                                         uint8_t * {aka unsigned char *}
+C:/Users/piotr/esp/v5.3.1/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h:427:61: note: expected 'esp_attr_control_t *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  427 |                                         esp_attr_control_t *control);
+      |                                         ~~~~~~~~~~~~~~~~~~~~^~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:482:23: warning: unused variable 'ssid_descr_uuid' [-Wunused-variable]
+  482 |         esp_bt_uuid_t ssid_descr_uuid = {
+      |                       ^~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c: At top level:
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:173:27: warning: 'b_prepare_write_env' defined but not used [-Wunused-variable]
+  173 | static prepare_type_env_t b_prepare_write_env;
+      |                           ^~~~~~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:56:25: warning: 'gatts_demo_char1_val' defined but not used [-Wunused-variable]
+   56 | static esp_attr_value_t gatts_demo_char1_val =
+      |                         ^~~~~~~~~~~~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:54:29: warning: 'b_property' defined but not used [-Wunused-variable]
+   54 | static esp_gatt_char_prop_t b_property = 0;
+      |                             ^~~~~~~~~~
+C:/Users/piotr/Desktop/IoT/iot_ble_server/main/gatts_demo.c:44:13: warning: 'test_device_name' defined but not used [-Wunused-variable]
+   44 | static char test_device_name[ESP_BLE_ADV_NAME_LEN_MAX] = "ESP_GATTS_DEMO";
+      |             ^~~~~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable gatt_server_demos.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated C:/Users/piotr/Desktop/IoT/iot_ble_server/build/gatt_server_demos.bin
+[7/7] cmd.exe /C "cd /D C:\Users\piotr\Desktop\IoT\iot_ble_server\build\esp-idf\esptool_py && C:\Users\piotr\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/piotr/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/piotr/Desktop/IoT/iot_ble_server/build/partition_table/partition-table.bin C:/Users/piotr/Desktop/IoT/iot_ble_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0xb6e70 bytes. Smallest app partition is 0x100000 bytes. 0x49190 bytes (29%) free.

@@ -1,0 +1,65 @@
+[1/5] cmd.exe /C "cd /D C:\Users\piotr\Desktop\IoT\iot_ble_server\build\esp-idf\esptool_py && C:\Users\piotr\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/piotr/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/piotr/Desktop/IoT/iot_ble_server/build/partition_table/partition-table.bin C:/Users/piotr/Desktop/IoT/iot_ble_server/build/gatt_server_demos.bin"
+gatt_server_demos.bin binary size 0xb7290 bytes. Smallest app partition is 0x100000 bytes. 0x48d70 bytes (28%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\piotr\Desktop\IoT\iot_ble_server\build\bootloader\esp-idf\esptool_py && C:\Users\piotr\.espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Users/piotr/esp/v5.3.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/piotr/Desktop/IoT/iot_ble_server/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Users\piotr\esp\v5.3.1\esp-idf\components\esptool_py && C:\Users\piotr\.espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Users/piotr/esp/v5.3.1/esp-idf -D SERIAL_TOOL=C:/Users/piotr/.espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Users/piotr/esp/v5.3.1/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/piotr/Desktop/IoT/iot_ble_seesptool.py --chip esp32 -p COM3 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 gatt_server_demos.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port COM3
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 88:13:bf:01:f0:5c
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000c7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16353...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16353 compressed) at 0x00001000 in 0.6 seconds (effective 344.2 kbit/s)...
+Hash of data verified.
+Compressed 750224 bytes to 429133...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001f5a6... (7 %)
+Writing at 0x0002c6ae... (11 %)
+Writing at 0x00037456... (14 %)
+Writing at 0x0003d011... (18 %)
+Writing at 0x00042c5f... (22 %)
+Writing at 0x0004858d... (25 %)
+Writing at 0x0004e52f... (29 %)
+Writing at 0x000540b6... (33 %)
+Writing at 0x00059b45... (37 %)
+Writing at 0x0005f85a... (40 %)
+Writing at 0x0006526f... (44 %)
+Writing at 0x0006bd2c... (48 %)
+Writing at 0x0007213e... (51 %)
+Writing at 0x00078355... (55 %)
+Writing at 0x0007e361... (59 %)
+Writing at 0x0008425c... (62 %)
+Writing at 0x0008a2b5... (66 %)
+Writing at 0x0008fdf1... (70 %)
+Writing at 0x00095849... (74 %)
+Writing at 0x0009bab7... (77 %)
+Writing at 0x000a1da8... (81 %)
+Writing at 0x000a8b2d... (85 %)
+Writing at 0x000b2290... (88 %)
+Writing at 0x000b9ce1... (92 %)
+Writing at 0x000bfa38... (96 %)
+Writing at 0x000c5e2c... (100 %)
+Wrote 750224 bytes (429133 compressed) at 0x00010000 in 11.0 seconds (effective 546.5 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 481.9 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+rver/build -P C:/Users/piotr/esp/v5.3.1/esp-idf/components/esptool_py/run_serial_tool.cmake"
